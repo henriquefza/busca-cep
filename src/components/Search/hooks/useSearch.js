@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { api } from "../../../services/api";
+import { axios } from "../../../services/axios";
 
 export function useSearch() {
 
@@ -22,7 +22,7 @@ export function useSearch() {
   const handleGetCep = async (cep) => {
 
     try {
-      const response = await api.get(cep + '/json');
+      const response = await axios.get(cep + '/json');
       setFilters(response.data);
       setLoading(false);
       setCep("");

@@ -1,0 +1,1 @@
+export const axios = axios.defaults.baseURL = 'http://viacep.com.br/ws/';
